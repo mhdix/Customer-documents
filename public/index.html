@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>customer document</title>
-    <link rel="stylesheet" href="./build/tailwind.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Menu with JS</title>
+  <link rel="stylesheet" href="build/tailwind.css">
 </head>
-<body dir="rtl">
-    <header class="">
-        <ul>
-            <li>لیست مشتری ها</li>
-            <li>لیست هزینه ها</li>
-            <li>لیست بانک ها</li>
-            <li>اضافه کردن مشتری</li>
-            <li>مرتب سازی</li>
+<body class="bg-gray-100 justify-center items-center h-screen p-4">
+
+    <div class="w-1/2 justify-center text-center hidden md:flex">
+        <p class=" bg-blue-600 w-fit text-white px-3 py-1 rounded-t">
+            Mahdi customer
+        </p>
+    </div>
+  <!-- Navigation Bar -->
+  <nav class="bg-blue-600 text-white p-4 rounded-lg w-full md:w-1/2">
+    <div class="flex justify-between items-center">
+        <p class="text-white md:hidden">
+            Mahdi<br/>customer
+        </p>
+        <div class="rotate-90 flex">
+            <span>|</span>  
+            <span>|</span>
+            <span>|</span>
+        </div>
+    </div>
+    <ul class="justify-between items-center hidden md:flex">
+      <li><a href="#" class="hover:bg-blue-700 p-2 rounded">افزودن حساب جدید</a></li>
+      <li><a href="#" class="hover:bg-blue-700 p-2 rounded">اسناد</a></li>
+
+      <!-- Dropdown Menu -->
+      <li class="relative">
+        <button id="dropdownButton" class="hover:bg-blue-700 p-2 rounded focus:outline-none">
+          لیست ها
+        </button>
+        <!-- Submenu -->
+        <ul id="dropdownMenu" class="absolute left-0 mt-2 bg-white text-black p-2 rounded-lg shadow-lg hidden">
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Web Development</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">App Development</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">SEO Services</a></li>
         </ul>
-    </header>
+      </li>
+
+      <li><a href="#" class="hover:bg-blue-700 p-2 rounded">خانه</a></li>
+    </ul>
+  </nav>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js"></script>
+
 </body>
 </html>
